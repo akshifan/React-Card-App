@@ -1,0 +1,250 @@
+@import "tailwindcss";
+.card {
+  position: relative;
+  width: 290px;
+  margin: 20px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden; /* 🔥 important */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top {
+  height: 140px;
+  background: linear-gradient(135deg, #5070ff, #4a67d6);
+  position: relative;
+}
+
+.card .img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid white;
+}
+.card h2 {
+  margin-top: 43px;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #222222;
+}
+
+.text {
+    margin: 10px;
+  font-size: 14px;
+  color: hsl(0, 0%, 26%);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+
+.fb { background: #3b5998;
+opacity: 0.9; }
+.tw { background: #1da1f2; 
+opacity: 0.8; }
+.ig { background: #e3536e; 
+opacity: 0.9; }
+.yt { background: #ff0000; 
+opacity: 0.8; }
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 9px;
+}
+
+.card-button button {
+    width: 100px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #5f7cff, #4a67d6);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.card-button button:hover {
+  opacity: 0.9;
+}
+
+.card:hover{
+    box-shadow: 0 10px 10px hsla(0, 0%, 50%, 0.727);
+    transform: translateY(-5px);
+}
+.header{
+    text-align: center;
+    margin: 20px;
+    color: hsl(0, 0%, 21%);
+    border: 1px solid hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 83%);
+    box-shadow: 0 5px 10px hsla(0, 0%, 50%, 0.727);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-bottom {
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  font-size: 13px; 
+  color: #555;
+  margin: 10px;
+  margin-bottom: -8px;
+}
+
+.card-bottom p {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  margin: 0;
+}
+
+.card-bottom svg {
+  width: 16px;
+  height: 15px;
+  stroke: hsl(0, 0%, 26%);
+  margin-bottom: 2px;
+}
+
+.card-bottom p:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: #838383;
+}
+
+.message {
+  position: absolute;
+  top: 0;              
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 90%;
+  padding: 20px;
+  background-color: #b4b4b4;
+  border-radius: 20px;
+  border: 1px solid hsl(0, 0%, 85%);
+  box-shadow: 0 5px 10px hsla(0, 0%, 50%, 0.3);
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+.message input {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid hsl(0, 0%, 85%);
+  background: #c9c9c9;
+  outline: none;
+}
+.message button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #284fff, #4a67d6);
+  color: white;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border: 1px solid black;
+  box-shadow: 0 5px 15px hsla(0, 0%, 34%, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.confirm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.confirm-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
