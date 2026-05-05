@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CardContext } from "../context/CardContext";
 
-const CreateCard = ({ addCard,setOpen }) => {  //props of addcard function and visibility of creating card form from App.jsx 
-   const [form, setForm] = useState({
+const CreateCard = () => {  //props of addcard function and visibility of creating card form from App.jsx 
+  const {addCard, setOpen} = useContext(CardContext); 
+  const [form, setForm] = useState({
     name: "",
     role: "",
     followers: "",

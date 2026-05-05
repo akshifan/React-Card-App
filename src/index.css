@@ -1,11 +1,12 @@
 @import "tailwindcss";
+
 .card {
   position: relative;
   width: 290px;
   margin: 20px;
   background-color: #f5f5f5;
   border-radius: 20px;
-  overflow: hidden; /* 🔥 important */
+  overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   text-align: center;
   transition: 0.3s;
@@ -30,6 +31,7 @@
   transform: translateX(-50%);
   border: 4px solid white;
 }
+
 .card h2 {
   margin-top: 43px;
   font-size: 20px;
@@ -83,7 +85,7 @@ opacity: 0.8; }
   border: none;
   border-radius: 25px;
   background: linear-gradient(135deg, #5f7cff, #4a67d6);
-  color: white;
+  color: hsl(0, 0%, 99%);
   font-size: 14px;
   cursor: pointer;
 }
@@ -96,19 +98,21 @@ opacity: 0.8; }
     box-shadow: 0 10px 10px hsla(0, 0%, 50%, 0.727);
     transform: translateY(-5px);
 }
+
 .header{
     text-align: center;
-    margin: 20px;
     color: hsl(0, 0%, 21%);
     border: 1px solid hsl(0, 0%, 85%);
     background-color: hsl(0, 0%, 83%);
     box-shadow: 0 5px 10px hsla(0, 0%, 50%, 0.727);
     border-radius: 10px;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
+
 .card-bottom {
   padding: 12px 0;
   display: flex;
@@ -149,22 +153,26 @@ opacity: 0.8; }
   z-index: 5;
   width: 90%;
   padding: 20px;
-  background-color: #b4b4b4;
+  background-color: #c2c2c2;
   border-radius: 20px;
-  border: 1px solid hsl(0, 0%, 85%);
-  box-shadow: 0 5px 10px hsla(0, 0%, 50%, 0.3);
+  border: 1px solid hsl(0, 0%, 83%);
+  box-shadow: 0 5px 10px hsla(0, 0%, 82%, 0.3);
   opacity: 0.95;
   display: flex;
   flex-direction: column;
-  align-items: center;}
+  align-items: center;
+}
+
 .message input {
   margin-top: 20px;
+  box-shadow: 0 5px 10px hsla(0, 0%, 47%, 0.3);
   padding: 10px;
   border-radius: 20px;
-  border: 1px solid hsl(0, 0%, 85%);
-  background: #c9c9c9;
+  border: 1px solid hsl(0, 0%, 92%);
+  background: #ededed;
   outline: none;
 }
+
 .message button {
   padding: 10px 18px;
   border-radius: 20px;
@@ -180,7 +188,7 @@ opacity: 0.8; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,9 +196,9 @@ opacity: 0.8; }
 }
 
 .modal {
-  background: white;
-  border: 1px solid black;
-  box-shadow: 0 5px 15px hsla(0, 0%, 34%, 0.15);
+  border: 1px solid hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 70%);
+    box-shadow: 0 5px 10px hsla(0, 0%, 50%, 0.727);
   padding: 20px;
   border-radius: 20px;
   width: 300px;
@@ -198,17 +206,21 @@ opacity: 0.8; }
   flex-direction: column;
   gap: 10px;
   animation: fadeIn 0.3s ease;
+  font-weight:500;
 }
 
 .modal input {
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #e1e1e1;
+  background-color: hsl(0, 0%, 92%);
+  box-shadow: 0 5px 10px hsla(0, 0%, 75%, 0.727);
 }
 
 .modal-buttons {
   display: flex;
   justify-content: space-between;
+  
 }
 
 @keyframes fadeIn {
@@ -228,7 +240,7 @@ opacity: 0.8; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(14, 14, 14, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,10 +248,13 @@ opacity: 0.8; }
 }
 
 .confirm-box {
-  background: white;
+  border: 1px solid hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 85%);
+    box-shadow: 0 5px 10px hsla(0, 0%, 89%, 0.727);
   padding: 20px;
   border-radius: 15px;
   text-align: center;
+  font-weight: 500;
 }
 
 .confirm-buttons {
@@ -247,4 +262,21 @@ opacity: 0.8; }
   gap: 10px;
   justify-content: center;
   margin-top: 10px;
+}
+
+.landing {
+  transition: 0.3s;
+}
+
+.landing:hover {
+  box-shadow: 0 10px 10px hsla(0, 0%, 50%, 0.727);
+  transform: translateY(-5px);
+}
+
+.login input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  background-color: hsl(0, 0%, 95%);
+  box-shadow: 0 5px 10px hsla(0, 0%, 75%, 0.727);
 }
