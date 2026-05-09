@@ -13,10 +13,15 @@ export const Navbar = () => {
 
             <div className="flex justify-between items-center relative">
 
-                {/* Welcome */}
-                <h1 className="text-white text-xl font-bold">
-                    Welcome
+            {!user ? (
+                <h1 className="text-white text-xl font-bold flex flex-col leading-loose">
+                    <span>Hello</span>
+                    <span className='text-sm font-normal'>by A.K.Shifan😊</span>
                 </h1>
+            ) : (<h1 className="text-white text-xl font-bold flex flex-col leading-loose">
+                    Welcome <span className='text-sm font-normal'>{user.email}</span>
+                </h1>
+                )}
 
                 {!user ? (
 
