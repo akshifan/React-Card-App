@@ -4,15 +4,16 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    return JSON.parse(
+      localStorage.getItem("sessionUser")
+    );
+  });
 
-  useEffect(() => {
-    const session = JSON.parse(localStorage.getItem("sessionUser"));
-    if (session) setUser(session);
-  }, []);
 
   const signup = (data) => {
     localStorage.setItem("registeredUser", JSON.stringify(data));
+    localStorage.setItem("sessionUser",JSON.stringify(data));
     setUser(data);
   };
 
@@ -24,6 +25,7 @@ export const AuthProvider = ({ children }) => {
       storedUser.email === email &&
       storedUser.password === password
     ) {
+      localStorage.setItem("sessionUser",JSON.stringify(storedUser));
       setUser(storedUser);
       return true;
     }
