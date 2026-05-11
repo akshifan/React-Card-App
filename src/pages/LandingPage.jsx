@@ -40,7 +40,7 @@ export const LandingPage = () => {
           own sports card collection with likes and subscriptions.
         </p>
 
-        <div className=' rounded-3xl shadow-2xl  bg-white/10 backdrop-blur-lg  p-4 mr-6'>
+        <div className=' rounded-3xl shadow-2xl  bg-white/10 backdrop-blur-lg  p-4 mx-auto w-fit'>
           <h1 className='text-center font-bold text-xl'>Sample card</h1>
           
             <Card
