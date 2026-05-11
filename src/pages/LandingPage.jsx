@@ -31,7 +31,7 @@ export const LandingPage = () => {
   <div className="absolute inset-0 bg-black/20"></div>
 
   
-        <h2 className="text-4xl md:text-5xl font-bold text-amber-50 mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-amber-50 -mt-12 mb-10">
          <span className="bg-linear-to-r from-blue-300 to-gray-400 bg-clip-text text-transparent">Discover Players, Track Matches & Build Your Cards</span> 
         </h2>
 
