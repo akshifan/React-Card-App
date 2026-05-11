@@ -40,8 +40,8 @@ export const LandingPage = () => {
           own sports card collection with likes and subscriptions.
         </p>
 
-        <div className=' rounded-3xl shadow-2xl  bg-white/10 backdrop-blur-lg  p-4 mx-auto w-fit'>
-          <h1 className='text-center font-bold text-xl'>Sample card</h1>
+        
+          <h1 className='text-center text-white font-bold text-xl'>Sample card</h1>
           
             <Card
           {...demoCard}
@@ -50,7 +50,6 @@ export const LandingPage = () => {
           likeCount={demoCard.followers}
           demo={true}
         />
-        </div>
 
 
       <section className="relative z-10 px-6 py-20">
