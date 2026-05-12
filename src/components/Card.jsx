@@ -86,12 +86,12 @@ const finalLikeCount = demo ? demoLikeCount : likeCount;
           }}>
           {finalSubscribed ? "Subscribed" : "Subscribe"}
         </button>
-          {!demo && (
-        <button
-          style={{
-          background: finalSubscribed ? "linear-gradient(135deg, #1e1e1e, #2a2a2a, #d4af37)" : ""}}
-          onClick={showMessage } >Message</button>
-          )}
+          {/* {!demo && (
+        // <button
+        //   style={{
+        //   background: finalSubscribed ? "linear-gradient(135deg, #1e1e1e, #2a2a2a, #d4af37)" : ""}}
+        //   onClick={showMessage } >Message</button>
+          )} */}
       </div>
       
       {show && <Message show={show} setShow={setShow}/>} {/*passing visibility of message box to Message.jsx*/}
